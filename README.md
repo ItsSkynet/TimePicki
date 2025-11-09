@@ -63,12 +63,14 @@ Timepicki - FREE Timepicker JQuery plugin, simple and easy to understand, a clea
 | hide.modal.timepicki | This event is fired immediately when TimePicki modal close event has been called | .element (input) |
 | hidden.modal.timepicki | This event is fired immediately when TimePicki modal has finished being hidden from the user | .element (input) |
 ```html
+<script>
   $(window).on('hidden.modal.timepicki', function (event) {
     // Do something like...
     console.log(`TimePicki closed with values set to ${event.element.getAttribute('data-timepicki-tim')} : ${event.element.getAttribute('data-timepicki-min')} ${event.element.getAttribute('data-timepicki-meri')}`);
     // OR if meridian is disabled do something like...
     console.log(`TimePicki closed with values set to ${event.element.getAttribute('data-timepicki-tim')} : ${event.element.getAttribute('data-timepicki-min')}`);
   });
+</script>
 ```
 
 <br/><br/>
