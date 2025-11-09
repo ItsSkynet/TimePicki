@@ -40,7 +40,7 @@
 			step_size_hours: 1,
 			step_size_minutes: 1,
 			overflow_minutes: false,
-			disable_keyboard_mobile: false,
+			disable_keyboard: false,
 			reset: false,
       		input_writable: false
 		};		
@@ -66,12 +66,12 @@
 					"<div class='arrow_top'></div>" +
 					"<div class='time'>" +
 						top_arrow_button +
-						"<div class='ti_tx'><input type='text' class='timepicki-input'" + (settings.disable_keyboard_mobile ? "readonly" : "") + "></div>" +
+						"<div class='ti_tx'><input type='text' class='timepicki-input'" + (settings.disable_keyboard ? "readonly" : "") + "></div>" +
 						bottom_arrow_button +
 					"</div>" +
 					"<div class='mins'>" +
 						top_arrow_button +
-						"<div class='mi_tx'><input type='text' class='timepicki-input'" + (settings.disable_keyboard_mobile ? "readonly" : "") + "></div>" +
+						"<div class='mi_tx'><input type='text' class='timepicki-input'" + (settings.disable_keyboard ? "readonly" : "") + "></div>" +
 						bottom_arrow_button +
 					"</div>");
 			if(settings.show_meridian){
@@ -170,10 +170,7 @@
 			    done = false;
 			    function wrapValidate() {
 			        if (!done) {
-
-
                         validate();
-
 			            done = true;
                     }
 			    }
@@ -284,8 +281,6 @@
 						ele.val(settings.format_output(tim, mini));
 					}
 				}
-
-				//Call user on_change callback function if set
 				var timepicki_change_event = $.Event('change.time.timepicki');
 				timepicki_change_event.element: ele[0];
 				$(window).trigger(timepicki_change_event);
@@ -506,8 +501,6 @@
 					}
 				}
 			});
-
 		});
 	};
-
 }(jQuery));
