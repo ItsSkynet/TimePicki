@@ -12,28 +12,57 @@ Timepicki - FREE Timepicker JQuery plugin, simple and easy to understand, a clea
 ```
 2. Identify or add your input for TimePicki to be attached to
 ```html
-<input type="text" name="timepicker" class="time_element"/>
+<input type="text" name="my_timepicker_name" class="my_timepicker_class"/>
 ```
 3. Call TimePicki function with your input element selector of choice
 ```html
 <script>
   $(function() {
-    $(".time_element").timepicki();
+    $(element).timepicki();
+    // OR
+    $(element).timepicki(options);
   });
 </script>
 ```
 
-## Methods
-> [!NOTE]
-> Coming Soon
-
 ## Options
-> [!NOTE]
-> Coming Soon
+```html
+  let options = {
+    increase_direction: 'up',
+    custom_classes: '',
+    min_hour_value: 1,
+    max_hour_value: 12,
+    show_meridian: true,
+    step_size_hours: 1,
+    step_size_minutes: 1,
+    overflow_minutes: false,
+    disable_keyboard_mobile: false,
+    reset: false,
+    input_writable: false
+  };
+```
+| Option | Type | Default | Accepted values | Description |
+| --- | --- | --- | --- | --- |
+| increase_direction | String | 'up' | 'up', 'down' | Set increase hour or minute direction |
+| custom_classes | String | '' | Any user declared string | Set custom classes to TimePicki |
+| min_hour_value | Int | 1 | 0-23 integer | Set minimum selectable hour |
+| max_hour_value | Int | 1 | 1-24 integer | Set maximum selectable hour |
+| show_meridian | Bool | true | true, false | Toggle the meridian selector |
+| step_size_hours | Int | 1 | >1 integer | Change the step size for hour increase/decrease | 
+| step_size_minutes | Int | 1 | >1 integer | Change the step size for minute increase/decrease | 
+| overflow_minutes | Bool | false | true, false | Update hours if minutes overflows over max or min |
+| disable_keyboard_mobile | Bool | false | true, false | Prevent keyboard to show up on mobile (side effect: you can't type your hour on desktop keyboard) |
+| reset | Bool | false | true, false | Resets to current time on TimePicki show |
+| input_writable | Bool | false | true, false | Prevent input from being manually edited |
 
 ## Events
-> [!NOTE]
-> Coming Soon
+| Event | Description |
+| --- | --- |
+| show.modal.timepicki | This event fires immediately when TimePicki modal about to render |
+| shown.modal.timepicki | This event fires immediately when TimePicki modal has been made visible to the user |
+| change.time.timepicki | This event fires inmediately after user changes any value in TimePicki modal time controls |
+| hide.modal.timepicki | This event is fired immediately when TimePicki modal close event has been called |
+| hidden.modal.timepicki | This event is fired immediately when TimePicki modal has finished being hidden from the user |
 
 <br/><br/>
 ## About maintainer and original developer
