@@ -45,6 +45,7 @@ Timepicki - FREE Timepicker JQuery plugin, simple and easy to understand, a clea
 | --- | --- | --- | --- | --- |
 | increase_direction | String | 'up' | 'up', 'down' | Set increase hour or minute direction |
 | custom_classes | String | '' | Any user declared string | Set custom classes to TimePicki |
+| start_time | array | null | ["00", "00", "AM/PM"] | Set a start time |
 | min_hour_value | Int | 1 | 0-23 integer | Set minimum selectable hour |
 | max_hour_value | Int | 1 | 1-24 integer | Set maximum selectable hour |
 | show_meridian | Bool | true | true, false | Toggle the meridian selector |
