@@ -1,0 +1,46 @@
+{
+    "name": "timePicki",
+    "title": "TimePicki jQuery Timepicker",
+    "description": "TimePicki is a jQuery Timepicker plugin for input text fields",
+    "keywords": [
+        "Timepicker",
+        "Timepicki",
+        "Time"
+    ],
+    "version": "3.0",
+    "author": [
+        {
+            "name": "CollabWorkx",
+            "url": "https://collabworkx.com/"
+        },
+        {
+            "name": "Senthil Kumar",
+            "url": "https://senthilraj.github.io/resume/"
+        }
+    ],
+    "maintainers": [
+        {
+            "name": "CollabWorkx",
+            "email": "support@collabworkx.com",
+            "url": "https://collabworkx.com/"
+        },
+        {
+            "name": "Senthil Kumar",
+            "email": "senthil2rajan@gmail.com",
+            "url": "https://senthilraj.github.io/resume/"
+        }
+    ],
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/ItsSkynet/TimePicki/LICENSE.txt"
+        }
+    ],
+    "bugs": "https://github.com/ItsSkynet/TimePicki/issues",
+    "homepage": "https://github.com/ItsSkynet/TimePicki",
+    "docs": "https://github.com/ItsSkynet/TimePicki",
+    "download": "https://github.com/ItsSkynet/TimePicki",
+    "dependencies": {
+        "jquery": "3.7.1"
+    }
+}
