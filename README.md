@@ -56,13 +56,13 @@ Timepicki - FREE Timepicker JQuery plugin, simple and easy to understand, a clea
 | input_writable | Bool | false | true, false | Prevent input from being manually edited |
 
 ## Events
-| Event | Description |
-| --- | --- |
-| show.modal.timepicki | This event fires immediately when TimePicki modal about to render |
-| shown.modal.timepicki | This event fires immediately when TimePicki modal has been made visible to the user |
-| change.time.timepicki | This event fires inmediately after user changes any value in TimePicki modal time controls |
-| hide.modal.timepicki | This event is fired immediately when TimePicki modal close event has been called |
-| hidden.modal.timepicki | This event is fired immediately when TimePicki modal has finished being hidden from the user |
+| Event | Description | Return |
+| --- | --- | --- |
+| show.modal.timepicki | This event fires immediately when TimePicki modal about to render | .element (input) |
+| shown.modal.timepicki | This event fires immediately when TimePicki modal has been made visible to the user | .element (input) |
+| change.time.timepicki | This event fires inmediately after user changes any value in TimePicki modal time controls | .element (input) |
+| hide.modal.timepicki | This event is fired immediately when TimePicki modal close event has been called | .element (input) |
+| hidden.modal.timepicki | This event is fired immediately when TimePicki modal has finished being hidden from the user | .element (input) |
 
 <br/><br/>
 ## About maintainer and original developer
