@@ -1,7 +1,7 @@
 /*
  * Author: @senthil2rajan [Original Developer] | @ItsSkynet [CollabWorkx.com]
  * Plugin: TimePicki
- * Version: 3.0
+ * Version: 3.0.0
  * Website: github.com/ItsSkynet/TimePicki/
  */
 (function($) {	
@@ -282,7 +282,7 @@
 					}
 				}
 				var timepicki_change_event = $.Event('change.time.timepicki');
-				timepicki_change_event.element: ele[0];
+				timepicki_change_event.element = ele[0];
 				$(window).trigger(timepicki_change_event);
 
 				if (close) {
@@ -292,7 +292,7 @@
 
 			function open_timepicki() {
 				var timepicki_show_event = $.Event('show.modal.timepicki');
-				timepicki_show_event.element: ele[0];
+				timepicki_show_event.element = ele[0];
 				$(window).trigger(timepicki_show_event);
 				
 				set_date(settings.start_time);
@@ -316,19 +316,19 @@
 				first_input.on('keydown', first_input_exit_handler);
 				
 				var timepicki_shown_event = $.Event('shown.modal.timepicki');
-				timepicki_shown_event.element: ele[0];
+				timepicki_shown_event.element = ele[0];
 				$(window).trigger(timepicki_shown_event);
 			}
 
 			function close_timepicki() {
 				var timepicki_hide_event = $.Event('hide.modal.timepicki');
-				timepicki_hide_event.element: ele[0];
+				timepicki_hide_event.element = ele[0];
 				$(window).trigger(timepicki_hide_event);
 				
 				ele_next.fadeOut();
 
 				var timepicki_hidden_event = $.Event('hidden.modal.timepicki');
-				timepicki_hidden_event.element: ele[0];
+				timepicki_hidden_event.element = ele[0];
 				$(window).trigger(timepicki_hidden_event);
 			}
 
