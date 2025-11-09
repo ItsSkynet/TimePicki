@@ -66,12 +66,18 @@ Timepicki - FREE Timepicker JQuery plugin, simple and easy to understand, a clea
 <script>
   $(window).on('hidden.modal.timepicki', function (event) {
     // Do something like...
-    console.log(`TimePicki closed with values set to ${event.element.getAttribute('data-timepicki-tim')} : ${event.element.getAttribute('data-timepicki-min')} ${event.element.getAttribute('data-timepicki-meri')}`);
+    console.log(`TimePicki closed with values set to ${event.element.getAttribute('data-timepicki-tim')}:${event.element.getAttribute('data-timepicki-mini')} ${event.element.getAttribute('data-timepicki-meri')}`);
     // OR if meridian is disabled do something like...
-    console.log(`TimePicki closed with values set to ${event.element.getAttribute('data-timepicki-tim')} : ${event.element.getAttribute('data-timepicki-min')}`);
+    console.log(`TimePicki closed with values set to ${event.element.getAttribute('data-timepicki-tim')}:${event.element.getAttribute('data-timepicki-mini')}`);
   });
 </script>
 ```
+## Attributes
+| Attribute | Description |
+| --- | --- |
+| data-timepicki-tim | Hour |
+| data-timepicki-mini | Minutes |
+| data-timepicki-meri | AM/PM (Meridian - If enabled) |
 
 <br/><br/>
 ## About maintainer and original developer
