@@ -1,41 +1,34 @@
 /*
- * Author: @senthil2rajan
- * plugin: timepicker
- * website: senthilraj.github.io/Timepicki
+ * Author: @senthil2rajan [Original Developer] | @ItsSkynet [CollabWorkx.com]
+ * Plugin: TimePicki
+ * Version: 3.0
+ * Website: github.com/ItsSkynet/TimePicki/
  */
-(function($) {
-
+(function($) {	
 	$.fn.timepicki = function(options) {
-
 		var defaults = {
 			format_output: function(tim, mini, meri) {
 			    if (settings.show_meridian) {
                     // limit hours between 1 and 12 - inculsive.
 			        tim = Math.min(Math.max(parseInt(tim), 1), 12);
-			        if (tim < 10)
+			        if (tim < 10){
 			            tim = "0" + tim;
-
-
+					}
 			        mini = Math.min(Math.max(parseInt(mini), 0), 59);
-			        if (mini < 10)
+			        if (mini < 10){
 			            mini = "0" + mini;
-
+					}
 					return tim + ":" + mini + " " + meri;
 			    } else {
-
 			        // limit hours between 0 and 23 - inculsive.
 			        tim = Math.min(Math.max(parseInt(tim), 0), 23);
-
-			        if (tim < 10)
+			        if (tim < 10){
 			            tim = "0" + tim;
-
-
+					}
 			        mini = Math.min(Math.max(parseInt(mini), 0), 59);
-			        if (mini < 10)
+			        if (mini < 10){
 			            mini = "0" + mini;
-
-			        //mini = Math.min(Math.max(parseInt(mini), 0), 59);
-
+					}
 					return tim + ":" + mini;
 				}
 			},
@@ -49,15 +42,12 @@
 			overflow_minutes: false,
 			disable_keyboard_mobile: false,
 			reset: false,
-			on_change: null,
-      			input_writable: false
-		};
-
+      		input_writable: false
+		};		
 		var settings = $.extend({}, defaults, options);
 
 		return this.each(function() {
-
-			var ele = $(this);
+			var ele = $(this);			
 			var ele_hei = ele.outerHeight();
 			ele_hei += 10;
 			$(ele).wrap("<div class='time_pick'>");
@@ -106,46 +96,13 @@
 				close_timepicki();
 			});
 
-			$(".timepicki-input").keydown(function (keyevent) {
-			    // our goal here is very simple.
-			    // no matter what the user presses
-			    // we must ensure that the values in our
-			    // timepicki inputs are valid, and that pressing
-			    // enter does not submit the form if the
-			    // input field on which timepicki is applied is a part of a form.
-
-
-			    // With that in mind. We proceed like this:
-			    // 1) If enter is pressed:
-			    //      i) Prevent default operations - form submission.
-                //      ii) close_timepicki().
-			    //      iii) return.
-                //
-			    // 2) For any other key presses:
-			    //      i) realize that we cannot check what the user has typed
-			    //         just yet, because this function is a handler
-			    //         that runs before any text is rendered in the input
-			    //         box.
-			    //      ii) So, register a function validate() that will execute right
-			    //          after the keypress character is rendered. All validation
-                //          is done inside validate().
-                //-----------------------------------------------------------------------------------
-			    //  NOTE:.change() event does not work here, as it is called when input looses focus|
-                //-----------------------------------------------------------------------------------
-
-                // (1)
-			    // prevent potential form submission, if enter is pressed.
+			$(".timepicki-input").keydown(function (keyevent) {			    
 			    if (keyevent.keyCode == 13) {
-
 			        keyevent.preventDefault();
-
 			        set_value();
 			        close_timepicki();
-			        // nothing to do here.
 			        return;
 			    }
-
-
 
 			    // the grand father div specifies the type of
 			    // input that we are dealing with. if the grandFatherDiv
@@ -166,56 +123,36 @@
 			    // validate() function validates the
 			    // user input.
 			    function validate() {
-
 			        var isValidNumber = /^\d+$/.test(input.val());
 			        var isEmpty = input.val() === "";
-
-
 			        if (grandfatherDiv.hasClass("time")) { /// HOUR
-
-
 			            // if its a valid number.
                         // clip it and assign it.
 			            if (isValidNumber) {
-
                             // clip number.
 			                var hours = (settings.show_meridian) ?
                             Math.min(Math.max(parseInt(input.val()), 1), 12) : // for 12 hour date picker.
 			                Math.min(Math.max(parseInt(input.val()), 0), 23); // for 24 hours date picker.
-
 			                // assign number.
 			                input.val(hours);
-
 			            } else if(!isEmpty) {
                             // else if the number is invalid and not empty
                             // assign the lastValue
 			                input.val(lastValue);
-
 			            }
-
-
-
 			        } else if (grandfatherDiv.hasClass("mins")) { /// MINUTE
-
-
 			            // if its a valid number.
 			            // clip it and assign it.
 			            if (isValidNumber) {
-
 			                // clip number.
 			                var minutes = Math.min(Math.max(parseInt(input.val()), 0), 59);
-
 			                // assign number.
 			                input.val(minutes);
-
 			            } else if (!isEmpty) {
 			                // else if the number is invalid and not empty
 			                // assign the lastValue
 			                input.val(lastValue);
-
 			            }
-
-
 			        } else if (grandfatherDiv.hasClass("meridian")) { /// MERIDIAN
 			            // key presses should not affect
 			            // meridian - except up and down
@@ -225,7 +162,6 @@
 			        } else {
                         // alert("This should not happen.");
 			        }
-
 			    }
 
 			    // wrapValidate() ensures that validate()
@@ -350,9 +286,9 @@
 				}
 
 				//Call user on_change callback function if set
-				if (settings.on_change !== null) {
-					settings.on_change(ele[0]);
-				}
+				var timepicki_change_event = $.Event('change.time.timepicki');
+				timepicki_change_event.element: ele[0];
+				$(window).trigger(timepicki_change_event);
 
 				if (close) {
 					close_timepicki();
@@ -360,6 +296,10 @@
 			}
 
 			function open_timepicki() {
+				var timepicki_show_event = $.Event('show.modal.timepicki');
+				timepicki_show_event.element: ele[0];
+				$(window).trigger(timepicki_show_event);
+				
 				set_date(settings.start_time);
 				ele_next.fadeIn();
 				if(!settings.input_writable) {
@@ -379,10 +319,22 @@
 					}
 				};
 				first_input.on('keydown', first_input_exit_handler);
+				
+				var timepicki_shown_event = $.Event('shown.modal.timepicki');
+				timepicki_shown_event.element: ele[0];
+				$(window).trigger(timepicki_shown_event);
 			}
 
 			function close_timepicki() {
+				var timepicki_hide_event = $.Event('hide.modal.timepicki');
+				timepicki_hide_event.element: ele[0];
+				$(window).trigger(timepicki_hide_event);
+				
 				ele_next.fadeOut();
+
+				var timepicki_hidden_event = $.Event('hidden.modal.timepicki');
+				timepicki_hidden_event.element: ele[0];
+				$(window).trigger(timepicki_hidden_event);
 			}
 
 			function set_date(start_time) {
