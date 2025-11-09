@@ -1,60 +1,45 @@
-TimePicki
-=========
+# TimePicki
+Timepicki - FREE Timepicker JQuery plugin, simple and easy to understand, a clean way for your users to select times. Multiple initialization options and event callbacks for a higher degree of control and customization.
 
-Timepicki - free Time picker jquery plugin, it is simple and clean timepicker so user can understand to set time for your project in input forms.
+## Requirements
+- JQuery 3.7.1 - [JQueryCDN](https://code.jquery.com/jquery-3.7.1.min.js) | [JsDelivr](https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js)
 
-Reason to make : I have tried to search set timepicker for one of the form page, this type of timepicker only on boostrap framework as bootsstrap-timepicker, but if we use that plugin then also need to use bootstrap css and js, so that will conflict
-our own code css and some time make js conflict issue, that why i make it simple, so you can use easily with jquery library 1.x and 2.x too, if you find any issue or need any additional features in this plugin , kindly reach me on my mail(I mentioned on bottom of the page)
-
-
-How to use
-==========
-
-- 1)Include jquery plugin and TimePicki Plugin
-- 2)call Timepicki function with input element selector
-
+## How to use
+1. Include TimePicki Plugin js and css
 ```html
-<script src="js/jquery.js"></script>
-<script src="js/timepicki.js"></script>
+<link rel="stylesheet" type="text/css" href="path_to/timepicki.css">
+<script type="text/javascript" src="path_to/timepicki.js"></script>
+```
+2. Identify or add your input for TimePicki to be attached to
+```html
+<input type="text" name="timepicker" class="time_element"/>
+```
+3. Call TimePicki function with your input element selector of choice
+```html
 <script>
-  $(document).ready(function(){
+  $(function() {
     $(".time_element").timepicki();
   });
 </script>
 ```
 
-- 3)put html code in body tag like below:
-```html
-<input type="text" name="timepicker" class="time_element"/>
-```        
+## Methods
+> [!NOTE]
+> Coming Soon
 
-- 4)also put css fiel
-```html
-<link rel="stylesheet" type="text/css" href="css/timepicki.css">
-```
-features and options
-====================
-if you need to know about timepicki features and options to [Click here](http://senthilraj.github.io/TimePicki/)
-## Demo
+## Options
+> [!NOTE]
+> Coming Soon
 
-###[Click to see Demo](http://senthilraj.github.io/TimePicki/)
+## Events
+> [!NOTE]
+> Coming Soon
 
+<br/><br/>
+## About maintainer and original developer
+### Active Maintainer:
+CollabWorkx is a next-gen work management platform that unifies collaboration, communication, and productivity. Built for flexibility and security, it empowers teams of all sizes to work smarter and achieve more—together. Learn more at: https://collabworkx.com/
 
-## Download
+### Original Developer:
+I am senthil and I am  7+ years Frontend developer. Website: http://senthilraj.github.io/resume/
 
-### Download [Timepicki zip archive](https://github.com/senthilraj/TimePicki/archive/master.zip)
-
-
-About me
-========
- I am senthil and I am  7+ years Frontend developer. I am building innovative applications, any doubts on TimePicki plugin or add addtional feature in this plugin feel free to catch me on Mail: senthil2rajan@gmail.com
-
-Website: http://senthilraj.github.io/resume/
-
-Add your Website
-================
-
-if you are using our plugin, we will add in here as plugin users with website link,
-so kindly send me your website link to this MailId : senthil2rajan@gmail.com 
-
-Thanks
