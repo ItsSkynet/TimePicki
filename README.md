@@ -37,8 +37,7 @@ Timepicki - FREE Timepicker JQuery plugin, simple and easy to understand, a clea
     step_size_minutes: 1,
     overflow_minutes: false,
     disable_keyboard_mobile: false,
-    reset: false,
-    input_writable: false
+    reset: false
   };
 ```
 | Option | Type | Default | Accepted values | Description |
@@ -52,9 +51,8 @@ Timepicki - FREE Timepicker JQuery plugin, simple and easy to understand, a clea
 | step_size_hours | Int | 1 | >1 integer | Change the step size for hour increase/decrease | 
 | step_size_minutes | Int | 1 | >1 integer | Change the step size for minute increase/decrease | 
 | overflow_minutes | Bool | false | true, false | Update hours if minutes overflows over max or min |
-| disable_keyboard_mobile | Bool | false | true, false | Prevent keyboard to show up on mobile (side effect: you can't type your hour on desktop keyboard) |
+| disable_keyboard | Bool | false | true, false | TimePicki inputs become readonly |
 | reset | Bool | false | true, false | Resets to current time on TimePicki show |
-| input_writable | Bool | false | true, false | Prevent input from being manually edited |
 
 ## Events
 | Event | Description | Return |
