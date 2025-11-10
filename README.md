@@ -1,5 +1,10 @@
 # TimePicki
 Timepicki - FREE Timepicker jQuery plugin, simple and easy to understand, a clean way for your users to select times. Multiple initialization options and event callbacks for a higher degree of control and customization.
+### Changelog
+| Version | Date | Maintained? |
+| --- | --- | --- |
+| 3.0.0 | Nov 10th, 2025 | ✅ |
+| 3.0.0 - RC | Nov 10th, 2025 | ❌ |
 
 ## Requirements
 - jQuery 3.7.1 - [jQueryCDN](https://code.jquery.com/jquery-3.7.1.min.js) | [JsDelivr](https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js)
