@@ -7,6 +7,10 @@
  * Created on: 17 Sep, 2014
  * Updated on: 11 Nov, 2025
  */
+.time_pick {
+	position: relative;
+	margin-left: 15px;
+}
 .timepickli_dark {
 	.ti_tx,
 	.mi_tx,
@@ -45,11 +49,7 @@
 	}
 	.prev {
 		background-position: 50% -50%;
-	}
-	.time_pick {
-		position: relative;
-		margin-left: 15px;
-	}
+	}	
 	.timepicker_wrap {
 		padding: 10px;
 		border-radius: 15px;
@@ -129,10 +129,6 @@
 	}
 	.prev {
 		background-position: 50% -50%;
-	}
-	.time_pick {
-		position: relative;
-		margin-left: 15px;
 	}
 	.timepicker_wrap {
 		padding: 10px;
