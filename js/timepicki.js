@@ -372,6 +372,7 @@
 					}
 				};
 				first_input.on('keydown', first_input_exit_handler);
+				set_value();
 				
 				var timepicki_shown_event = $.Event('shown.modal.timepicki');
 				timepicki_shown_event.element = ele[0];
