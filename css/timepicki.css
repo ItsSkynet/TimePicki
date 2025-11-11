@@ -2,7 +2,7 @@
 /*
  * Author: @senthil2rajan [Original Developer] | @ItsSkynet [CollabWorkx.com]
  * Plugin: TimePicki
- * Version: 3.0.1
+ * Version: 3.0.3
  * Website: github.com/ItsSkynet/TimePicki/
  * Created on: 17 Sep, 2014
  * Updated on: 11 Nov, 2025
@@ -10,163 +10,209 @@
 .time_pick {
 	position: relative;
 	margin-left: 15px;
-}
-.timepickli_dark {
-	padding: 10px;
-	border-radius: 15px;
-	z-index: 998;
-	display: none;
-	box-shadow: 2px 2px 5px 0 rgba(50,50,50,0.35);
-	background: #2a2b2f;
-	border: 1px solid #2a2b2f;
-	float: left;
-	position: absolute;
-	top: 36px;
-    left: 15px;
-	
-	.ti_tx,
-	.mi_tx,
-	.mer_tx {
-		width: 100%;
-		text-align: center;
-		margin: 10px 0;
-	}
-	.time,
-	.mins,
-	.meridian {
-		width: 60px;
-		float: left;
-		margin: 0;
-		font-size: 20px;
-		color: #2d2e2e;
-		font-family: arial;
-		font-weight: 700;
-	}
-	.prev,
-	.next {
-		cursor: pointer;
-		padding: 18px;
-		width: 28%;
-		border: 0px solid #ccc;
-		margin: auto;
-		background: url(../images/arrow.png) no-repeat;
-		border-radius: 5px;
-	}
-	.prev:hover,
-	.next:hover {
-		background-color: #ccc;
-	}
-	.next {
-		background-position: 50% 150%;
-	}
-	.prev {
-		background-position: 50% -50%;
-	}
-	.arrow_top {
-		position: absolute;
-		top: -10px;
-		left: 10px;
-		background: url("data:image/svg+xml,%3Csvg%20aria-hidden%3D%22true%22%20focusable%3D%22false%22%20role%3D%22img%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20512%20512%22%3E%3Cpath%20fill%3D%22%232a2b2f%22%20d%3D%22M290.5%2051.8C283.3%2039.5%20270.2%2032%20256%2032s-27.3%207.5-34.5%2019.8l-216%20368c-7.3%2012.4-7.3%2027.7-.2%2040.1S25.7%20480%2040%20480l432%200c14.3%200%2027.6-7.7%2034.7-20.1s7-27.8-.2-40.1l-216-368z%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E") no-repeat;
-		width: 18px;
-		height: 10px;
-		z-index: 999;
-		background-position: center;
-	}
-	input.timepicki-input {
-		border: 0px solid #ccc;
-	    background: none repeat scroll 0 0 #40444b;
-	    color: white;
-	    font-size: 16px;
-	    font-weight: 400;
-	    width: 75%;
-		border-radius: 5px 5px 5px 5px;
-		float: none;
-		margin: 0;
-		text-align: center;
-	}
-	a.reset_time {
-		float: left;
-		margin-top: 5px;
-		color: #000;
-	}
-}
 
-.timepickli_light {
-	padding: 10px;
-	border-radius: 15px;
-	z-index: 998;
-	display: none;
-	box-shadow: 2px 2px 5px 0 rgba(50,50,50,0.35);
-	background: #f6f6f6;
-	border: 1px solid #f6f6f6;
-	float: left;
-	position: absolute;
-	top: 36px;
-    left: 15px;
-	
-	.ti_tx,
-	.mi_tx,
-	.mer_tx {
-		width: 100%;
-		text-align: center;
-		margin: 10px 0;
-	}
-	.time,
-	.mins,
-	.meridian {
-		width: 60px;
+	.timepicki_dark {
+		padding: 10px;
+		border-radius: 15px;
+		z-index: 998;
+		display: none;
+		box-shadow: 2px 2px 5px 0 rgba(50,50,50,0.35);
+		background: #2a2b2f;
+		border: 1px solid #2a2b2f;
 		float: left;
-		margin: 0;
-		font-size: 20px;
-		color: #2d2e2e;
-		font-family: arial;
-		font-weight: 700;
-	}
-	.prev,
-	.next {
-		cursor: pointer;
-		padding: 18px;
-		width: 28%;
-		border: 0px solid #ccc;
-		margin: auto;
-		background: url(../images/arrow.png) no-repeat;
-		border-radius: 5px;
-	}
-	.prev:hover,
-	.next:hover {
-		background-color: #ccc;
-	}
-	.next {
-		background-position: 50% 150%;
-	}
-	.prev {
-		background-position: 50% -50%;
-	}
-	.arrow_top {
 		position: absolute;
-		top: -10px;
-		left: 10px;
-		background: url("data:image/svg+xml,%3Csvg%20aria-hidden%3D%22true%22%20focusable%3D%22false%22%20role%3D%22img%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20512%20512%22%3E%3Cpath%20fill%3D%22%23FFFFFF%22%20d%3D%22M290.5%2051.8C283.3%2039.5%20270.2%2032%20256%2032s-27.3%207.5-34.5%2019.8l-216%20368c-7.3%2012.4-7.3%2027.7-.2%2040.1S25.7%20480%2040%20480l432%200c14.3%200%2027.6-7.7%2034.7-20.1s7-27.8-.2-40.1l-216-368z%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E") no-repeat;
-		width: 18px;
-		height: 10px;
-		z-index: 999;
-		background-position: center;
+	    left: 15px;
+		
+		.ti_tx,
+		.mi_tx,
+		.mer_tx {
+			width: 100%;
+			text-align: center;
+			margin: 5px 0;
+			z-index: 1;
+		}
+		.time,
+		.mins,
+		.meridian {
+			width: 60px;
+			float: left;
+			margin: 0;
+			font-size: 20px;
+			color: #2d2e2e;
+			font-family: arial;
+			font-weight: 700;
+		}
+		.prev,
+		.next {
+			cursor: pointer;
+			padding: 18px;
+			width: 28%;
+			border: 0px solid #ccc;
+			margin: auto;
+			background: url(../images/arrow.png) no-repeat;
+			border-radius: 5px;
+			z-index: 1;
+		}
+		.prev:hover,
+		.next:hover {
+			background-color: #40444b;
+		}
+		.next {
+			background-position: 50% 105%;
+		}
+		.prev {
+			background-position: 50% -12%;
+		}
+		.modal_tip{
+			background: url("data:image/svg+xml,%3Csvg%20aria-hidden%3D%22true%22%20focusable%3D%22false%22%20role%3D%22img%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20512%20512%22%3E%3Cpath%20fill%3D%22%232a2b2f%22%20d%3D%22M290.5%2051.8C283.3%2039.5%20270.2%2032%20256%2032s-27.3%207.5-34.5%2019.8l-216%20368c-7.3%2012.4-7.3%2027.7-.2%2040.1S25.7%20480%2040%20480l432%200c14.3%200%2027.6-7.7%2034.7-20.1s7-27.8-.2-40.1l-216-368z%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E") no-repeat;
+			width: 18px;
+			height: 10px;
+			position: absolute;
+			z-index: 999;
+			background-position: center;
+		}
+		.arrow_top {		
+			top: -10px;
+			left: 10px;
+		}
+		.arrow_bottom {
+			bottom: -10px;
+			left: 10px;
+			transform: rotate(180deg);
+		}
+		input.timepicki-input {
+			border: 0px solid #40444b;
+		    background: none repeat scroll 0 0 #40444b;
+		    color: white;
+		    font-size: 16px;
+		    font-weight: 400;
+		    width: 75%;
+			border-radius: 5px 5px 5px 5px;
+			float: none;
+			margin: 0;
+			text-align: center;
+			padding: 4px 0;
+			z-index: 1;
+		}
+		.timepicki_reset{
+			display: flex;
+			margin-top: 5px;
+			
+			button.reset_time {
+				color: white;
+		        margin: 5px auto 0px auto;
+		        font-size: 14px;
+		        padding: 2px 18px;
+		        background-color: #40444b;
+		        border-radius: 15px;
+		        display: block;
+			}
+			button.reset_time:hover{
+				background-color: #676f7d;
+			}
+		}		
 	}
-	input.timepicki-input {
-		border: 0px solid #ccc;
-	    background: none repeat scroll 0 0 #FFFFFF;
-	    color: white;
-	    font-size: 16px;
-	    font-weight: 400;
-	    width: 75%;
-		border-radius: 5px 5px 5px 5px;
-		float: none;
-		margin: 0;
-		text-align: center;
-	}
-	a.reset_time {
+	
+	.timepicki_light {
+		padding: 10px;
+		border-radius: 15px;
+		z-index: 998;
+		display: none;
+		box-shadow: 2px 2px 5px 0 rgba(50,50,50,0.35);
+		background: #f6f6f6;
+		border: 1px solid #f6f6f6;
 		float: left;
-		margin-top: 5px;
-		color: #000;
+		position: absolute;
+		top: 36px;
+	    left: 15px;
+		
+		.ti_tx,
+		.mi_tx,
+		.mer_tx {
+			width: 100%;
+			text-align: center;
+			margin: 5px 0;
+			z-index: 1;
+		}
+		.time,
+		.mins,
+		.meridian {
+			width: 60px;
+			float: left;
+			margin: 0;
+			font-size: 20px;
+			color: #2d2e2e;
+			font-family: arial;
+			font-weight: 700;
+		}
+		.prev,
+		.next {
+			cursor: pointer;
+			padding: 0px 0px 20px 0px;
+			width: 75%;
+			border: 0px solid #ccc;
+			margin: auto;
+			background: url(../images/arrow.png) no-repeat;
+			border-radius: 15px;
+			z-index: 1;
+		}
+		.prev:hover,
+		.next:hover {
+			background-color: #dadada;
+		}
+		.next {
+			background-position: 50% 105%;
+		}
+		.prev {
+			background-position: 50% -12%;
+		}
+		.modal_tip {
+			background: url("data:image/svg+xml,%3Csvg%20aria-hidden%3D%22true%22%20focusable%3D%22false%22%20role%3D%22img%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20512%20512%22%3E%3Cpath%20fill%3D%22%23FFFFFF%22%20d%3D%22M290.5%2051.8C283.3%2039.5%20270.2%2032%20256%2032s-27.3%207.5-34.5%2019.8l-216%20368c-7.3%2012.4-7.3%2027.7-.2%2040.1S25.7%20480%2040%20480l432%200c14.3%200%2027.6-7.7%2034.7-20.1s7-27.8-.2-40.1l-216-368z%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E") no-repeat;
+			width: 18px;
+			height: 10px;
+			position: absolute;
+			z-index: 999;
+			background-position: center;
+		}
+		.arrow_top {		
+			top: -10px;
+			left: 10px;
+		}
+		.arrow_bottom {
+			bottom: -10px;
+			left: 10px;
+			transform: rotate(180deg);
+		}
+		input.timepicki-input {
+			border: 0px solid #dadada;
+			background: none repeat scroll 0 0 #dadada;
+	    	color: #636363;
+		    font-size: 16px;
+		    font-weight: 400;
+		    width: 75%;
+			border-radius: 5px 5px 5px 5px;
+			float: none;
+			margin: 0;
+			text-align: center;
+			padding: 4px 0;
+			z-index: 1;
+		}
+		.timepicki_reset{
+			display: flex;
+			margin-top: 5px;
+			
+			button.reset_time {
+				color: #303030;
+		        margin: 5px auto 0px auto;
+		        font-size: 14px;
+		        padding: 2px 18px;
+		        background-color: #dcac4f;
+		        border-radius: 15px;
+		        display: block;
+			}
+			button.reset_time:hover{
+				background-color: #ffb931;
+			}
+		}
 	}
 }
