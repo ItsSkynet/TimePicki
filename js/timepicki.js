@@ -76,15 +76,15 @@
 			var tip_top_render, tip_bottom_render;
 			switch(settings.position){
 				case "bottom":
-					tip_top_render = "<div class='arrow_top'></div>";
+					tip_top_render = "<div class='modal_tip arrow_top'></div>";
 					tip_bottom_render = "";
 					break;
 				case "top":
 					tip_top_render = "";
-					tip_bottom_render = "<div class='arrow_bottom'></div>";
+					tip_bottom_render = "<div class='modal_tip arrow_bottom'></div>";
 					break;
 				default:
-					tip_top_render = "<div class='arrow_top'></div>";
+					tip_top_render = "<div class='modal_tip arrow_top'></div>";
 					tip_bottom_render = "";
 					break;
 			}
