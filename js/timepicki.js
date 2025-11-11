@@ -1,7 +1,7 @@
 /*
  * Author: @senthil2rajan [Original Developer] | @ItsSkynet [CollabWorkx.com]
  * Plugin: TimePicki
- * Version: 3.0.1
+ * Version: 3.0.2
  * Website: github.com/ItsSkynet/TimePicki/
  */
 (function($) {	
@@ -41,9 +41,10 @@
 			step_size_minutes: 1,
 			overflow_minutes: false,
 			disable_keyboard: false,
-			reset: false,
+			show_reset: false,
       		input_writable: false,
-			theme: "dark"
+			theme: "dark",
+			position: "bottom"
 		};		
 		var settings = $.extend({}, defaults, options);
 
@@ -54,43 +55,84 @@
 			$(ele).wrap("<div class='time_pick'>");
 			var ele_par = $(this).parents(".time_pick");
 
-			// developer can specify which arrow makes the numbers go up or down
-			var top_arrow_button = (settings.increase_direction === 'down') ?
-				"<div class='prev action-prev'></div>" :
-				"<div class='prev action-next'></div>";
-			var bottom_arrow_button = (settings.increase_direction === 'down') ?
-				"<div class='next action-next'></div>" :
-				"<div class='next action-prev'></div>";
+			// developer can specify which arrow makes the numbers go up or down | default: "up"
+			var top_arrow_button, bottom_arrow_button;
+			switch(settings.increase_direction){
+				case "up":
+					top_arrow_button = "<div class='prev action-next'></div>";
+					bottom_arrow_button = "<div class='next action-prev'></div>";
+					break;
+				case "down":
+					top_arrow_button = "<div class='prev action-prev'></div>";
+					bottom_arrow_button = "<div class='next action-next'></div>";
+					break;
+				default:
+					top_arrow_button = "<div class='prev action-next'></div>";
+					bottom_arrow_button = "<div class='next action-prev'></div>";
+					break;
+			}
 
-			var new_ele = $(
-				`<div class='timepicker_wrap timepickli_${settings.theme} ${settings.custom_classes}'>
-					<div class='arrow_top'></div>
-					<div class='time'>
-						${top_arrow_button}
-						<div class='ti_tx'>
-							<input type='text' class='timepicki-input' ${(settings.disable_keyboard ? "readonly" : "")}>
-						</div>
-						${bottom_arrow_button}
-					</div>
-					<div class='mins'>
-						${top_arrow_button}
-						<div class='mi_tx'>
-							<input type='text' class='timepicki-input' ${(settings.disable_keyboard ? "readonly" : "")}>
-						</div>
-						${bottom_arrow_button}
-					</div>`);
+			// developer can specify where TimePicki renders | default: "bottom"
+			var tip_top_render, tip_bottom_render;
+			switch(settings.position){
+				case "bottom":
+					tip_top_render = "<div class='arrow_top'></div>";
+					tip_bottom_render = "";
+					break;
+				case "top":
+					tip_top_render = "";
+					tip_bottom_render = "<div class='arrow_bottom'></div>";
+					break;
+				default:
+					tip_top_render = "<div class='arrow_top'></div>";
+					tip_bottom_render = "";
+					break;
+			}
+			
+			var meridian_render = "";
 			if(settings.show_meridian){
-				new_ele.append(
-					`<div class='meridian'>
+				meridian_render = `
+					<div class='meridian'>
 						${top_arrow_button}
 						<div class='mer_tx'><input type='text' class='timepicki-input' readonly></div>
 						${bottom_arrow_button}
-					</div>`);
+					</div>
+				`;
 			}
-			if(settings.reset){
-				new_ele.append(
-					"<div><a href='#' class='reset_time'>Reset</a></div>");
+			
+			var reset_render = "";
+			if(settings.show_reset){
+				reset_render = `
+					<div class="timepicki_reset">
+						<button class='reset_time'>Clear</button>
+					</div>
+				`;
 			}
+			
+			var new_ele = $(`
+				<div class='timepicker_wrap timepickli_${settings.theme} ${settings.custom_classes}'>
+					${tip_top_render}
+					<div class="timepicki_controls">
+						<div class='time'>
+							${top_arrow_button}
+							<div class='ti_tx'>
+								<input type='text' class='timepicki-input' ${(settings.disable_keyboard ? "readonly" : "")}>
+							</div>
+							${bottom_arrow_button}
+						</div>
+						<div class='mins'>
+							${top_arrow_button}
+							<div class='mi_tx'>
+								<input type='text' class='timepicki-input' ${(settings.disable_keyboard ? "readonly" : "")}>
+							</div>
+							${bottom_arrow_button}
+						</div>
+						${meridian_render}
+					</div>
+					${reset_render}
+					${tip_top_render}
+			`);
+			
 			ele_par.append(new_ele);
 			var ele_next = $(this).next(".timepicker_wrap");
 			var ele_next_all_child = ele_next.find("div");
@@ -197,12 +239,23 @@
 					if (!$(event.target).is(ele)) {
 						set_value(event, !is_element_in_timepicki($(event.target)));
 					} else {
-						var ele_lef =  0;
-
-						ele_next.css({
-							"top": ele_hei + "px",
-							"left": ele_lef + "px"
-						});
+						switch(settings.position){
+							case "bottom":
+								ele_next.css({
+									"top": ele_hei + "px"
+								});
+								break;
+							case "top":
+								ele_next.css({
+									"bottom": ele_hei + "px"
+								});
+								break;
+							default:
+								ele_next.css({
+									"top": ele_hei + "px"
+								});
+								break;
+						}					
 						open_timepicki();
 					}
 				}
