@@ -1,10 +1,12 @@
 # TimePicki
-Timepicki - FREE Timepicker jQuery plugin, simple and easy to understand, a clean way for your users to select times. Multiple initialization options and event callbacks for a higher degree of control and customization.
+TimePicki - FREE Timepicker jQuery plugin, simple and easy to understand, a clean way for your users to select times. Multiple initialization options and event callbacks for a higher degree of control and customization.
 ### Changelog
 | Version | Date | Maintained? |
 | --- | --- | --- |
-| 3.0.0 | Nov 10th, 2025 | ✅ |
-| 3.0.0 - RC | Nov 10th, 2025 | ❌ |
+| 3.0.3 | Nov 11th, 2025 | ✅ |
+| 3.0.2 | Nov 11th, 2025 | ❌ |
+| 3.0.1 | Nov 11th, 2025 | ❌ |
+| 3.0.0 | Nov 10th, 2025 | ❌ |
 
 ## Requirements
 - jQuery 3.7.1 - [jQueryCDN](https://code.jquery.com/jquery-3.7.1.min.js) | [JsDelivr](https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js)
@@ -44,7 +46,9 @@ Timepicki - FREE Timepicker jQuery plugin, simple and easy to understand, a clea
     step_size_minutes: 1,
     overflow_minutes: false,
     disable_keyboard_mobile: false,
-    reset: false
+    show_reset: false,
+    theme: "dark",
+    position: "bottom"
   };
 ```
 | Option | Type | Default | Accepted values | Description |
@@ -59,7 +63,9 @@ Timepicki - FREE Timepicker jQuery plugin, simple and easy to understand, a clea
 | step_size_minutes | Int | 1 | >1 integer | Change the step size for minute increase/decrease | 
 | overflow_minutes | Bool | false | true, false | Update hours if minutes overflows over max or min |
 | disable_keyboard | Bool | false | true, false | TimePicki inputs become readonly |
-| reset | Bool | false | true, false | Resets to current time on TimePicki show |
+| show_reset | Bool | false | true, false | Adds a button that empties the input value and closes TimePicki |
+| theme | String | "dark" | "dark", "light" | Changes the theme of TimePicki |
+| position | String | "bottom" | "bottom", "top" | Changes the position of TimePicki |
 
 ## Events
 | Event | Description | Return |
