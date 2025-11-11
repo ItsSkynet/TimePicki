@@ -12,6 +12,18 @@
 	margin-left: 15px;
 }
 .timepickli_dark {
+	padding: 10px;
+	border-radius: 15px;
+	z-index: 998;
+	display: none;
+	box-shadow: 2px 2px 5px 0 rgba(50,50,50,0.35);
+	background: #2a2b2f;
+	border: 1px solid #2a2b2f;
+	float: left;
+	position: absolute;
+	top: 27px;
+	left: 0;
+	
 	.ti_tx,
 	.mi_tx,
 	.mer_tx {
@@ -49,19 +61,6 @@
 	}
 	.prev {
 		background-position: 50% -50%;
-	}	
-	.timepicker_wrap {
-		padding: 10px;
-		border-radius: 15px;
-		z-index: 998;
-		display: none;
-		box-shadow: 2px 2px 5px 0 rgba(50,50,50,0.35);
-		background: #2a2b2f;
-		border: 1px solid #2a2b2f;
-		float: left;
-		position: absolute;
-		top: 27px;
-		left: 0;
 	}
 	.arrow_top {
 		position: absolute;
@@ -92,6 +91,18 @@
 }
 
 .timepickli_light {
+	padding: 10px;
+	border-radius: 15px;
+	z-index: 998;
+	display: none;
+	box-shadow: 2px 2px 5px 0 rgba(50,50,50,0.35);
+	background: #f6f6f6;
+	border: 1px solid #f6f6f6;
+	float: left;
+	position: absolute;
+	top: 27px;
+	left: 0;
+	
 	.ti_tx,
 	.mi_tx,
 	.mer_tx {
@@ -129,19 +140,6 @@
 	}
 	.prev {
 		background-position: 50% -50%;
-	}
-	.timepicker_wrap {
-		padding: 10px;
-		border-radius: 15px;
-		z-index: 998;
-		display: none;
-		box-shadow: 2px 2px 5px 0 rgba(50,50,50,0.35);
-		background: #f6f6f6;
-		border: 1px solid #f6f6f6;
-		float: left;
-		position: absolute;
-		top: 27px;
-		left: 0;
 	}
 	.arrow_top {
 		position: absolute;
