@@ -1,7 +1,7 @@
 /*
  * Author: @senthil2rajan [Original Developer] | @ItsSkynet [CollabWorkx.com]
  * Plugin: TimePicki
- * Version: 3.0.3
+ * Version: 3.0.2
  * Website: github.com/ItsSkynet/TimePicki/
  */
 (function($) {	
