@@ -42,7 +42,8 @@
 			overflow_minutes: false,
 			disable_keyboard: false,
 			reset: false,
-      		input_writable: false
+      		input_writable: false,
+			theme: "dark"
 		};		
 		var settings = $.extend({}, defaults, options);
 
@@ -62,25 +63,29 @@
 				"<div class='next action-prev'></div>";
 
 			var new_ele = $(
-				"<div class='timepicker_wrap " + settings.custom_classes + "'>" +
-					"<div class='arrow_top'></div>" +
-					"<div class='time'>" +
-						top_arrow_button +
-						"<div class='ti_tx'><input type='text' class='timepicki-input'" + (settings.disable_keyboard ? "readonly" : "") + "></div>" +
-						bottom_arrow_button +
-					"</div>" +
-					"<div class='mins'>" +
-						top_arrow_button +
-						"<div class='mi_tx'><input type='text' class='timepicki-input'" + (settings.disable_keyboard ? "readonly" : "") + "></div>" +
-						bottom_arrow_button +
-					"</div>");
+				`<div class='timepicker_wrap timepickli_${settings.theme} ${settings.custom_classes}'>
+					<div class='arrow_top'></div>
+					<div class='time'>
+						${top_arrow_button}
+						<div class='ti_tx'>
+							<input type='text' class='timepicki-input' ${(settings.disable_keyboard ? "readonly" : "")}>
+						</div>
+						${bottom_arrow_button}
+					</div>
+					<div class='mins'>
+						${top_arrow_button}
+						<div class='mi_tx'>
+							<input type='text' class='timepicki-input' ${(settings.disable_keyboard ? "readonly" : "")}>
+						</div>
+						${bottom_arrow_button}
+					</div>`);
 			if(settings.show_meridian){
 				new_ele.append(
-					"<div class='meridian'>" +
-						top_arrow_button +
-						"<div class='mer_tx'><input type='text' class='timepicki-input' readonly></div>" +
-						bottom_arrow_button +
-					"</div>");
+					`<div class='meridian'>
+						${top_arrow_button}
+						<div class='mer_tx'><input type='text' class='timepicki-input' readonly></div>
+						${bottom_arrow_button}
+					</div>`);
 			}
 			if(settings.reset){
 				new_ele.append(
