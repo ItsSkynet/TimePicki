@@ -3,8 +3,8 @@ TimePicki - FREE Timepicker jQuery plugin, simple and easy to understand, a clea
 ### Version status
 | Version | Date | Maintained? |
 | --- | --- | --- |
-| 3.0.3 | Nov 11th, 2025 | ✅ |
-| <= 3.0.2 | Nov 10-11th, 2025 | ❌ |
+| 3.0.4 | Nov 11th, 2025 | ✅ |
+| <= 3.0.3 | Nov 10-11th, 2025 | ❌ |
 
 ## Requirements
 - jQuery 3.7.1 - [jQueryCDN](https://code.jquery.com/jquery-3.7.1.min.js) | [JsDelivr](https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js)
