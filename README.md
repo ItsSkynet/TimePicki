@@ -66,13 +66,15 @@ TimePicki - FREE Timepicker jQuery plugin, simple and easy to understand, a clea
 | position | String | "bottom" | "bottom", "top" | Changes the position of TimePicki |
 
 ## Events
-| Event | Description | Return |
-| --- | --- | --- |
-| show.modal.timepicki | This event fires immediately when TimePicki modal about to render | .element (input) |
-| shown.modal.timepicki | This event fires immediately when TimePicki modal has been made visible to the user | .element (input) |
-| change.time.timepicki | This event fires inmediately after user changes any value in TimePicki modal time controls | .element (input) |
-| hide.modal.timepicki | This event is fired immediately when TimePicki modal close event has been called | .element (input) |
-| hidden.modal.timepicki | This event is fired immediately when TimePicki modal has finished being hidden from the user | .element (input) |
+> [!NOTE]
+> All events return your targeted element, this way you can hook to it to obtain input updated attributes or edit them beforehand.
+| Event | Description |
+| --- | --- |
+| show.modal.timepicki | This event fires immediately when TimePicki modal about to render |
+| shown.modal.timepicki | This event fires immediately when TimePicki modal has been made visible to the user |
+| change.time.timepicki | This event fires inmediately after user changes any value in TimePicki modal time controls |
+| hide.modal.timepicki | This event is fired immediately when TimePicki modal close event has been called |
+| hidden.modal.timepicki | This event is fired immediately when TimePicki modal has finished being hidden from the user |
 ```html
 <script>
   $(window).on('hidden.modal.timepicki', function (event) {
