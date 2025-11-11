@@ -45,12 +45,12 @@
 		.prev,
 		.next {
 			cursor: pointer;
-			padding: 18px;
-			width: 28%;
+			padding: 0px 0px 20px 0px;
+			width: 75%;
 			border: 0px solid #ccc;
 			margin: auto;
 			background: url(../images/arrow.png) no-repeat;
-			border-radius: 5px;
+			border-radius: 15px;
 			z-index: 1;
 		}
 		.prev:hover,
