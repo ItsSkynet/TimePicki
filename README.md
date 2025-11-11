@@ -43,7 +43,7 @@ TimePicki - FREE Timepicker jQuery plugin, simple and easy to understand, a clea
     step_size_hours: 1,
     step_size_minutes: 1,
     overflow_minutes: false,
-    disable_keyboard_mobile: false,
+    disable_keyboard: false,
     show_reset: false,
     theme: "dark",
     position: "bottom"
