@@ -242,17 +242,17 @@
 						switch(settings.position){
 							case "bottom":
 								ele_next.css({
-									"top": ele_hei + "px"
+									"top": `${ele_hei} px`
 								});
 								break;
 							case "top":
 								ele_next.css({
-									"bottom": ele_hei + "px"
+									"bottom": `${ele_hei} px`
 								});
 								break;
 							default:
 								ele_next.css({
-									"top": ele_hei + "px"
+									"top": `${ele_hei} px`
 								});
 								break;
 						}					
