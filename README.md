@@ -3,8 +3,7 @@ TimePicki - FREE Timepicker jQuery plugin, simple and easy to understand, a clea
 ### Changelog
 | Version | Date | Maintained? |
 | --- | --- | --- |
-| 3.0.3 | Nov 11th, 2025 | ✅ |
-| 3.0.2 | Nov 11th, 2025 | ❌ |
+| 3.0.2 | Nov 11th, 2025 | ✅ |
 | 3.0.1 | Nov 11th, 2025 | ❌ |
 | 3.0.0 | Nov 10th, 2025 | ❌ |
 
