@@ -110,7 +110,7 @@
 			}
 			
 			var new_ele = $(`
-				<div class='timepicker_wrap timepickli_${settings.theme} ${settings.custom_classes}'>
+				<div class='timepicker_wrap timepicki_${settings.theme} ${settings.custom_classes}'>
 					${tip_top_render}
 					<div class="timepicki_controls">
 						<div class='time'>
