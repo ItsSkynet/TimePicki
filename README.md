@@ -68,6 +68,7 @@ TimePicki - FREE Timepicker jQuery plugin, simple and easy to understand, a clea
 ## Events
 > [!NOTE]
 > All events return your targeted element, this way you can hook to it to obtain input updated attributes or edit them beforehand.
+
 | Event | Description |
 | --- | --- |
 | show.modal.timepicki | This event fires immediately when TimePicki modal about to render |
